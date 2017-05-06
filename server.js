@@ -117,9 +117,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 
 // return time
 slapp.message('timeee', ['mention', 'direct_message'], (msg) => {
-	var d = new Date();
-	var n = d.getTime();
-  msg.say(n)
+  msg.say('baaaaaaaaaaaaaaaak')
 })
 
 // my stuff
