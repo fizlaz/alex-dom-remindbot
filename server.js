@@ -124,3 +124,13 @@ server.listen(port, (err) => {
 
   console.log(`Listening on port ${port}`)
 })
+
+//////// my stuff
+
+// return time
+// response to the user typing "help"
+slapp.message('timeee', ['mention', 'direct_message'], (msg) => {
+	var d = new Date();
+	var n = d.getTime();
+  msg.say(n)
+})
