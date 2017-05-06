@@ -40,7 +40,8 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 slapp.message('timeex', ['mention', 'direct_message'], (msg) => {
 	var d = new Date();
 	var n = d.getTime();
-  msg.say(n.toString())
+  // n.toString()
+  msg.say(Date.stoString())
 })
 
 // my stuff
