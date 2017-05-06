@@ -113,6 +113,17 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
   }
 })
 
+// my stuff
+
+// return time
+slapp.message('timeee', ['mention', 'direct_message'], (msg) => {
+	var d = new Date();
+	var n = d.getTime();
+  msg.say(n)
+})
+
+// my stuff
+
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())
 
@@ -123,14 +134,4 @@ server.listen(port, (err) => {
   }
 
   console.log(`Listening on port ${port}`)
-})
-
-//////// my stuff
-
-// return time
-// response to the user typing "help"
-slapp.message('timeee', ['mention', 'direct_message'], (msg) => {
-	var d = new Date();
-	var n = d.getTime();
-  msg.say(n)
 })
