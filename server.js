@@ -34,6 +34,15 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
 })
 
+// my stuff
+
+// return time
+slapp.message('timeex', ['mention', 'direct_message'], (msg) => {
+  msg.say('baaaaaaaaaaaaaaaak')
+})
+
+// my stuff
+
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
 slapp
   .message('^(hi|hello|hey)$', ['direct_mention', 'direct_message'], (msg, text) => {
@@ -112,15 +121,6 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
     msg.say([':wave:', ':pray:', ':raised_hands:'])
   }
 })
-
-// my stuff
-
-// return time
-slapp.message('timeee', ['mention', 'direct_message'], (msg) => {
-  msg.say('baaaaaaaaaaaaaaaak')
-})
-
-// my stuff
 
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())
